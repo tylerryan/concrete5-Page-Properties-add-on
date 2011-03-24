@@ -1,0 +1,2 @@
+For license see:
+http://www.concrete5.org/marketplace/addons/page-properties/license/

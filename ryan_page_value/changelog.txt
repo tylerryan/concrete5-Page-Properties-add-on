@@ -1,0 +1,2 @@
+1.0 Initial Version
+1.0.1 - Fixed bug where this block would kill the search indexer.

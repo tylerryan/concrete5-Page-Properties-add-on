@@ -1,6 +1,6 @@
 <?php  defined('C5_EXECUTE') or die(_("Access Denied."));
 echo $controller->getOpenTag();
-echo $controller->getTitle();
+echo "<span>".$controller->getTitle()."</span>";
 echo $controller->getContent();
 echo $controller->getCloseTag();
 ?>

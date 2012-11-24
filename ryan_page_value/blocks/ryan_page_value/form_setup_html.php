@@ -27,7 +27,14 @@ $form = Loader::helper('form');
 		<div style="padding-bottom: 6px">
 			<strong><?php  echo t('Format of Date Properties')?></strong><br/>
 			<input type="text" name="dateFormat" value="<?php  echo $this->controller->dateFormat ?>"/><br/>			
-			See $format at <a href="http://www.php.net/date" target="_blank">php.net/date</a> for allowed formating
+			<?php echo sprintf(t('See the formatting options at %s.'), '<a href="http://www.php.net/date" target="_blank">php.net/date</a>'); ?>
+		</div>
+		<div style="padding-bottom: 6px">
+			<strong><?php echo t('Thumbnail'); ?></strong><br/>
+			<label for="thumbnail_width"><?php echo t('Width'); ?></label>
+			<input id="thumbnail_width" type="text" name="thumbnailWidth" value="<?php echo $this->controller->thumbnailWidth; ?>"/><br/>
+			<label for="thumbnail_height"><?php echo t('Height'); ?></label>
+			<input id="thumbnail_height" type="text" name="thumbnailHeight" value="<?php echo $this->controller->thumbnailHeight; ?>"/><br/>
 		</div>
 	</div>
 	

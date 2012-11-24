@@ -19,7 +19,7 @@ class RyanPageValuePackage extends Package {
 	/**
 	 * @var string
 	*/
-	protected $pkgVersion = '1.0.1';
+	protected $pkgVersion = '1.0.2';
 		
 	public function getPackageDescription() {
 		return t("Displays the value of a page property.");

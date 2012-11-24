@@ -1,4 +1,4 @@
-<?php 
+<?php  
 	defined('C5_EXECUTE') or die(_("Access Denied."));
 	Loader::model('attribute/categories/collection');
 	Loader::model('collection_types');
@@ -10,12 +10,21 @@
 				
 		/**
 		 * @var Page
-		*/
+		 */
 		public $cobj;
 		protected $btTable = 'btRyanPageValue';		
 		protected $btInterfaceWidth = "500";
 		protected $btInterfaceHeight = "365";
 		public $dateFormat = "m/d/y h:i:a";
+		/**
+		 * @var integer thumbnail height
+		 */
+		public $thumbnailHeight = 250;
+		
+		/**
+		 * @var integer thumbnail width
+		 */
+		public $thumbnailWidth = 250;
 		
 		public function __construct($obj = null) {
 			$cobj = Page::getCurrentPage();
@@ -51,11 +60,19 @@
 				case "rpv_pageDateCreated":
 					$content = $this->cobj->getCollectionDateAdded();
 				break;
+				case "rpv_pageDateLastModified":
+					$content = $this->cobj->getCollectionDateLastModified();
+				break;
 				case "rpv_pageDatePublic":
 					$content = $this->cobj->getCollectionDatePublic();
 				break;
 				default:
 					$content = $this->cobj->getAttribute($this->attributeHandle);
+					if(is_object($content) && get_class($content) === 'File') {
+						$im = Loader::helper('image');    
+						$thumb = $im->getThumbnail($content, $this->thumbnailWidth, $this->thumbnailHeight); //<-- set these 2 numbers to max width and height of thumbnails
+						$content = "<img src=\"{$thumb->src}\" width=\"{$thumb->width}\" height=\"{$thumb->height}\" alt=\"\" />";
+					}
 				break;
 			}
 		
@@ -96,7 +113,8 @@
 				'rpv_pageName'=>t('Page Name'),
 				'rpv_pageDescription'=>t('Page Description'),
 				'rpv_pageDateCreated'=>t('Page Date Created'),
-				'rpv_pageDatePublic'=>t('Page Date Published')
+				'rpv_pageDatePublic'=>t('Page Date Published'),
+				'rpv_pageDateLastModified'=>t('Page Date Modified'),
 			);
 		}
 		
@@ -113,6 +131,7 @@
 			if(in_array($this->attributeHandle,array_keys($this->getAvailablePageValues()))) {
 				switch($this->attributeHandle) {
 					case "rpv_pageDateCreated":
+					case 'rpv_pageDateLastModified':
 					case "rpv_pageDatePublic":
 						$templateHandle = 'date_time';
 					break;

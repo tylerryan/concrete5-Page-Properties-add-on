@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ryan_page_value 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 16:46+0100\n"
+"PO-Revision-Date: 2012-11-24 16:47+0100\n"
+"Last-Translator: Eliovir <eliovir@gmail.com>\n"
+"Language-Team: Concrete5 FR <team@concrete5.fr>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: blocks/ryan_page_value/edit.php:2
+#: blocks/ryan_page_value/form_setup_html.php:1
+#: blocks/ryan_page_value/add.php:2
+#: blocks/ryan_page_value/controller.php:2
+#: blocks/ryan_page_value/view.php:1
+#: blocks/ryan_page_value/templates/boolean.php:1
+#: blocks/ryan_page_value/templates/date_time.php:1
+#: controller.php:2
+msgid "Access Denied."
+msgstr "Accès refusé."
+
+#: blocks/ryan_page_value/form_setup_html.php:6
+msgid "Edit"
+msgstr "Editer"
+
+#: blocks/ryan_page_value/form_setup_html.php:8
+msgid "Options"
+msgstr "Options"
+
+#: blocks/ryan_page_value/form_setup_html.php:13
+msgid "Display property with formatting"
+msgstr "Format d'affichage des propriétés"
+
+#: blocks/ryan_page_value/form_setup_html.php:28
+msgid "Format of Date Properties"
+msgstr "Format d'affichage de la date"
+
+#: blocks/ryan_page_value/form_setup_html.php:30
+#, php-format
+msgid "See the formatting options at %s."
+msgstr "Voir les options de formatage à %s."
+
+#: blocks/ryan_page_value/form_setup_html.php:33
+msgid "Thumbnail"
+msgstr "Miniature"
+
+#: blocks/ryan_page_value/form_setup_html.php:34
+msgid "Width"
+msgstr "Largeur"
+
+#: blocks/ryan_page_value/form_setup_html.php:36
+msgid "Height"
+msgstr "Hauteur"
+
+#: blocks/ryan_page_value/form_setup_html.php:43
+msgid "Property to Display:"
+msgstr "Propriété à afficher"
+
+#: blocks/ryan_page_value/form_setup_html.php:45
+msgid "Page Values"
+msgstr "Valeurs des pages"
+
+#: blocks/ryan_page_value/form_setup_html.php:54
+msgid "Page Attributes"
+msgstr "Attributs de pages"
+
+#: blocks/ryan_page_value/form_setup_html.php:67
+msgid "Title Text"
+msgstr "Texte du titre affiché"
+
+#: blocks/ryan_page_value/controller.php:41
+msgid "Displays the value of a page property"
+msgstr "Afficher la valeur d'une propriété de page."
+
+#: blocks/ryan_page_value/controller.php:45
+#: controller.php:29
+msgid "Page Properties"
+msgstr "Propriétés de la page"
+
+#: blocks/ryan_page_value/controller.php:113
+msgid "Page Name"
+msgstr "Nom de la page"
+
+#: blocks/ryan_page_value/controller.php:114
+msgid "Page Description"
+msgstr "Description de la page"
+
+#: blocks/ryan_page_value/controller.php:115
+msgid "Page Date Created"
+msgstr "Date de création de la page"
+
+#: blocks/ryan_page_value/controller.php:116
+msgid "Page Date Published"
+msgstr "Date de publication de la page"
+
+#: blocks/ryan_page_value/controller.php:117
+msgid "Page Date Modified"
+msgstr "Date de modification de la page"
+
+#: blocks/ryan_page_value/templates/boolean.php:4
+msgid "Yes"
+msgstr "Oui"
+
+#: blocks/ryan_page_value/templates/boolean.php:4
+msgid "No"
+msgstr "Non"
+
+#: controller.php:25
+msgid "Displays the value of a page property."
+msgstr "Afficher la valeur d'une propriété de page."
+
